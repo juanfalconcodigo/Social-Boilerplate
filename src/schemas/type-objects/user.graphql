@@ -1,0 +1,23 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  gender: String
+  birthday: String
+  avatarImage: String
+  coverImage: String
+  token: String
+  username: String!
+  workPlace: String
+  school: String
+  homePlace: String
+  friends: [UserValue]
+}
+type UserValue {
+  id: ID
+  firstName: String
+  lastName: String
+  avatarImage: String
+  username: String
+}

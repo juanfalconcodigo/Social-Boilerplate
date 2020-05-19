@@ -1,0 +1,6 @@
+type Mutation {
+    register(registerInput: RegisterInput): User!
+    login(email: String!, password: String!): User!
+    createPost(body: String, image: String): Post!
+    deletePost(postId: ID!): String!
+}

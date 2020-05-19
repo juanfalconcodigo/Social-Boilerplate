@@ -1,0 +1,7 @@
+type Query{
+    getUsers: [UserValue]
+    loadUser: User!
+    getPosts: [Post]
+    getSinglePost(postId: String!): Post!
+    getUrlPosts(username: String!): [Post]
+}

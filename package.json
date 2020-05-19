@@ -1,0 +1,51 @@
+{
+    "name": "red-social",
+    "version": "1.0.0",
+    "description": "Implementation of a small social network",
+    "main": "build/index.js",
+    "scripts": {
+        "clean": "rimraf build/",
+        "build": "npm run clean && tsc -p . && ncp src/schemas build/schemas",
+        "dev": "nodemon src/index.ts --exec ts-node src/index.ts -e ts,graphql",
+        "start": "node build/index.js"
+    },
+    "keywords": [
+        "nodejs",
+        "graphql",
+        "red-social",
+        "typescript",
+        "apollo",
+        "mongodb"
+    ],
+    "author": "Juan Falcón <Juancodigo23@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "apollo-server-express": "^2.13.1",
+        "bcryptjs": "^2.4.3",
+        "compression": "^1.7.4",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "graphql": "^15.0.0",
+        "graphql-merge-resolvers": "^1.1.16",
+        "graphql-playground-middleware-express": "^1.7.14",
+        "graphql-tools": "^5.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "merge-graphql-schemas": "^1.7.8",
+        "mongoose": "^5.9.15",
+        "ncp": "^2.0.0",
+        "rimraf": "^3.0.2",
+        "shortid": "^2.2.15",
+        "ts-node": "^8.10.1"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.2",
+        "@types/compression": "^1.7.0",
+        "@types/cors": "^2.8.6",
+        "@types/express": "^4.17.6",
+        "@types/jsonwebtoken": "^8.5.0",
+        "@types/mongoose": "^5.7.20",
+        "@types/shortid": "0.0.29",
+        "nodemon": "^2.0.4",
+        "typescript": "^3.9.2"
+    }
+}
